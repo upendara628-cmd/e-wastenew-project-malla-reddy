@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Ecocycle E-Waste Management</title>
+  <style>
+    :root {
+      --blue-gradient-start: #1565c0;
+      --green-gradient-end: #2e7d32;
+      --accent-yellow: #fbc02d;
+      --card-bg: #ffffff;
+      --text-primary: #2e7d32;
+      --text-secondary: #1565c0;
+      --text-muted: #555a5f;
+      --header-footer-bg: linear-gradient(135deg, #1565c0, #2e7d32);
+      --border-radius: 12px;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      --transition-time: 0.3s;
+      --max-width: 900px;
+      --section-divider-color: #e0e7eb;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background: linear-gradient(to right, var(--blue-gradient-start), var(--green-gradient-end));
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 3rem;
+    }
+    header.site-header {
+      width: 100%;
+      background: var(--header-footer-bg);
+      color: var(--card-bg);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 2rem;
+    }
+    header.site-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    main.container {
+      max-width: var(--max-width);
+      width: 100%;
+      padding: 0 1.5rem;
+    }
+    h2.title {
+      font-size: 2rem;
+      margin: 0 0 0.2rem;
+      color: var(--text-secondary);
+      font-weight: 700;
+      text-align: center;
+    }
+    p.subtitle {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      font-size: 1.15rem;
+      color: var(--card-bg);
+      background-color: rgba(255 255 255 / 0.15);
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
+    section.policy-section {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      transition: box-shadow var(--transition-time);
+    }
+    section.policy-section:hover {
+      box-shadow: 0 14px 36px rgba(0,0,0,0.25);
+    }
+    section.policy-section h3 {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+    }
+    /* Number circle before h3 */
+    section.policy-section h3::before {
+      content: attr(data-number);
+      display: inline-block;
+      background-color: var(--accent-yellow);
+      color: var(--text-primary);
+      font-weight: 700;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      margin-right: 1rem;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      font-family: monospace;
+      box-shadow: 0 0 6px var(--accent-yellow);
+    }
+    section.policy-section p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-primary);
+      margin: 0 0 1rem;
+      font-weight: 400;
+    }
+    section.policy-section p:last-child {
+      margin-bottom: 0;
+    }
+    /* Section divider */
+    section.policy-section + section.policy-section {
+      border-top: 2px solid var(--section-divider-color);
+    }
+    footer.site-footer {
+      background: var(--header-footer-bg);
+      color: var(--card-bg);
+      width: 100%;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 500;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+      margin-top: auto;
+    }
+    footer.site-footer a {
+      color: var(--accent-yellow);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer.site-footer a:hover,
+    footer.site-footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    @media (max-width: 600px) {
+      header.site-header h1 {
+        font-size: 1.8rem;
+      }
+      main.container {
+        padding: 0 1rem;
+      }
+      section.policy-section {
+        padding: 1.5rem 1.5rem;
+      }
+      section.policy-section h3 {
+        font-size: 1.3rem;
+      }
+      section.policy-section h3::before {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 1rem;
+        margin-right: 0.75rem;
+      }
+      section.policy-section p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      footer.site-footer {
+        font-size: 0.9rem;
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1>Ecocycle E-Waste Management</h1>
+  </header>
+
+  <main class="container" role="main">
+    <h2 class="title">Privacy Policy</h2>
+    <p class="subtitle">Your trust matters to us</p>
+    
+    <section class="policy-section" data-number="1" aria-labelledby="section1-title">
+      <h3 id="section1-title">Information We Collect</h3>
+      <p>When you interact with Neospace, we may collect some personal information including your name, email, phone number, and location. This helps us serve you better and respond to your inquiries promptly.</p>
+    </section>
+    
+    <section class="policy-section" data-number="2" aria-labelledby="section2-title">
+      <h3 id="section2-title">How We Use Your Information</h3>
+      <p>We use your data solely to communicate, deliver services, and analyze trends to improve our offerings. Rest assured, your personal data is never sold, rented, or shared with third parties without your explicit consent.</p>
+    </section>
+
+    <section class="policy-section" data-number="3" aria-labelledby="section3-title">
+      <h3 id="section3-title">Data Security</h3>
+      <p>Your privacy and data protection are our priorities. We use industry-standard security technologies and procedures to safeguard your information, though internet transmission can never be fully guaranteed to be 100% secure.</p>
+    </section>
+
+    <section class="policy-section" data-number="4" aria-labelledby="section4-title">
+      <h3 id="section4-title">Cookies & Tracking</h3>
+      <p>We use cookies to improve your browsing experience and collect anonymized usage data. You can disable cookies anytime through your browser settings, though this may limit some features.</p>
+    </section>
+
+    <section class="policy-section" data-number="5" aria-labelledby="section5-title">
+      <h3 id="section5-title">Third-Party Links</h3>
+      <p>Our website may include links to external sites managed by others. While we strive to link only trustworthy sites, we are not responsible for their privacy policies or content.</p>
+    </section>
+
+    <section class="policy-section" data-number="6" aria-labelledby="section6-title">
+      <h3 id="section6-title">Your Rights</h3>
+      <p>You have complete control over your personal data. You can request access, correction, or deletion of your information by contacting us directly at <strong>privacy@neospace-ewaste.com</strong>.</p>
+    </section>
+
+    <section class="policy-section" data-number="7" aria-labelledby="section7-title">
+      <h3 id="section7-title">Updates to This Policy</h3>
+      <p>We periodically update our Privacy Policy to reflect changes in regulations or practices. Any updates will be posted here, and continued use of our services means acceptance of these updates.</p>
+    </section>
+    
+    <section class="policy-section" data-number="8" aria-labelledby="section8-title">
+      <h3 id="section8-title">Contact Us</h3>
+      <p>If you have any questions, concerns, or feedback about your privacy, please don’t hesitate to reach out. We’re here to help and listen.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <p>&copy; 2025 Ecocycle E-Waste Management. Committed to a cleaner, safer world.</p>
+    <p>Contact us: <a href="mailto:privacy@ecocycle-ewaste.com">privacy@ecocycle-ewaste.com</a></p>
+  </footer>
+</body>
+</html>
+
+

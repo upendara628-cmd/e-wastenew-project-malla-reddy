@@ -1,0 +1,198 @@
+/* Typography & Base */
+:root {
+  --color-green-dark: #1b5e20;
+  --color-green-mid: #3c8d2f;
+  --color-green-light: #b7dec1;
+  --color-blue-dark: #0d47a1;
+  --color-blue-light: #4299e1;
+  --color-white: #ffffff;
+  --color-cream: #f9f7f1;
+  --color-accent: #f2994a; /* warm accent */
+  --color-error: #c62828; /* red for errors */
+  
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(27, 94, 32, 0.35);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(67, 160, 71, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(66, 153, 225, 0.1) 0%, transparent 30%),
+    linear-gradient(135deg, var(--color-green-light), var(--color-blue-light) 120%);
+  font-family: var(--font-main);
+  color: var(--color-green-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Container */
+.login-container {
+  background-color: var(--color-white);
+  width: 420px;
+  max-width: 95vw;
+  border-radius: var(--border-radius);
+  padding: 40px 30px 50px;
+  box-shadow: 0 12px 28px var(--shadow-light);
+  text-align: center;
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.login-container:hover,
+.login-container:focus-within {
+  box-shadow: 0 16px 40px var(--shadow-strong);
+}
+
+/* Header */
+.login-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-blue-dark);
+  margin: 0 0 14px;
+  letter-spacing: 1.2px;
+  user-select: none;
+}
+
+.login-container p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-green-mid);
+  margin-bottom: 28px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  user-select: none;
+  font-size: 0.95rem;
+}
+
+/* Inputs */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  border-radius: 10px;
+  border: 2px solid #cfd8dc;
+  background-color: var(--color-cream);
+  transition:
+    border-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease,
+    background-color var(--transition-speed) ease;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-green-mid);
+  box-shadow: 0 0 8px rgba(67, 160, 71, 0.6);
+  background-color: #e7f5e9;
+  outline: none;
+}
+
+input:hover:not(:disabled):not(:focus),
+textarea:hover:not(:disabled):not(:focus) {
+  border-color: var(--color-blue-light);
+}
+
+/* Error state */
+input:invalid,
+textarea:invalid {
+  border-color: var(--color-error);
+  background-color: #ffe6e6;
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+  box-shadow: 0 0 8px rgba(198, 40, 40, 0.8);
+}
+
+/* Button */
+button {
+  width: 100%;
+  background: linear-gradient(90deg, var(--color-blue-dark), var(--color-green-mid));
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  color: var(--color-white);
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(27, 94, 32, 0.5);
+  user-select: none;
+  transition:
+    background-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease,
+    transform 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(90deg, var(--color-green-mid), var(--color-blue-dark));
+  box-shadow: 0 12px 30px rgba(66, 153, 90, 0.7);
+  outline: none;
+  transform: scale(1.04);
+}
+
+/* Link */
+a {
+  color: var(--color-green-mid);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 22px;
+  display: inline-block;
+  cursor: pointer;
+  transition: color var(--transition-speed);
+  text-decoration: none;
+  user-select: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-blue-light);
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px 20px 40px;
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+

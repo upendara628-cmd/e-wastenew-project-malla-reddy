@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Register - NeoCycle</title>
+<style>
+  :root {
+    --color-green-dark: #1b5e20;
+    --color-green-mid: #3c8d2f;
+    --color-green-light: #b7dec1;
+    --color-blue-dark: #0d47a1;
+    --color-blue-light: #4299e1;
+    --color-white: #ffffff;
+    --color-cream: #f9f7f1;
+    --color-accent: #f2994a; /* warm accent */
+    --color-error: #c62828; /* red for errors */
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-strong: rgba(27, 94, 32, 0.35);
+  }
+
+  /* Reset */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(67, 160, 71, 0.12) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(66, 153, 225, 0.1) 0%, transparent 30%),
+      linear-gradient(135deg, var(--color-green-light), var(--color-blue-light) 120%);
+    font-family: var(--font-main);
+    color: var(--color-green-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 80px;
+  }
+
+  /* Navbar */
+  nav.navbar {
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-green-dark), var(--color-blue-dark));
+    padding: 0.35rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+
+  nav.navbar .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    text-decoration: none;
+    user-select: none;
+  }
+
+  nav.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.navbar ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+    border-radius: 6px;
+    transition: background-color var(--transition-speed);
+  }
+
+  nav.navbar ul li a:hover,
+  nav.navbar ul li a:focus {
+    background-color: var(--color-green-mid);
+    outline: none;
+  }
+
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    nav.navbar {
+      flex-wrap: wrap;
+      padding: 0.35rem 0.8rem;
+    }
+    nav.navbar ul {
+      width: 100%;
+      justify-content: center;
+      gap: 0.7rem;
+      flex-wrap: wrap;
+      margin-top: 0.4rem;
+    }
+  }
+
+  /* Container */
+  .login-container {
+    background-color: var(--color-white);
+    width: 420px;
+    max-width: 95vw;
+    border-radius: var(--border-radius);
+    padding: 40px 30px 50px;
+    box-shadow: 0 12px 28px var(--shadow-light);
+    text-align: center;
+    transition: box-shadow var(--transition-speed) ease;
+    margin-top: 30px;
+  }
+
+  .login-container:hover,
+  .login-container:focus-within {
+    box-shadow: 0 16px 40px var(--shadow-strong);
+  }
+
+  /* Header */
+  .login-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-blue-dark);
+    margin: 0 0 14px;
+    letter-spacing: 1.2px;
+    user-select: none;
+  }
+
+  .login-container p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-green-mid);
+    margin-bottom: 28px;
+  }
+
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-green-dark);
+    user-select: none;
+    font-size: 0.95rem;
+  }
+
+  /* Inputs */
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    border-radius: 10px;
+    border: 2px solid #cfd8dc;
+    background-color: var(--color-cream);
+    transition:
+      border-color var(--transition-speed) ease,
+      box-shadow var(--transition-speed) ease,
+      background-color var(--transition-speed) ease;
+    resize: vertical;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: var(--color-green-mid);
+    box-shadow: 0 0 8px rgba(67, 160, 71, 0.6);
+    background-color: #e7f5e9;
+    outline: none;
+  }
+
+  input:hover:not(:disabled):not(:focus),
+  textarea:hover:not(:disabled):not(:focus) {
+    border-color: var(--color-blue-light);
+  }
+
+  /* Error state */
+  input:invalid,
+  textarea:invalid {
+    border-color: var(--color-error);
+    background-color: #ffe6e6;
+  }
+
+  input:invalid:focus,
+  textarea:invalid:focus {
+    box-shadow: 0 0 8px rgba(198, 40, 40, 0.8);
+  }
+
+  /* Button */
+  button {
+    width: 100%;
+    background: linear-gradient(90deg, var(--color-blue-dark), var(--color-green-mid));
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(27, 94, 32, 0.5);
+    user-select: none;
+    transition:
+      background-color var(--transition-speed) ease,
+      box-shadow var(--transition-speed) ease,
+      transform 0.2s ease;
+  }
+
+  button:hover,
+  button:focus {
+    background: linear-gradient(90deg, var(--color-green-mid), var(--color-blue-dark));
+    box-shadow: 0 12px 30px rgba(66, 153, 90, 0.7);
+    outline: none;
+    transform: scale(1.04);
+  }
+
+  /* Link */
+  a {
+    color: var(--color-green-mid);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 22px;
+    display: inline-block;
+    cursor: pointer;
+    transition: color var(--transition-speed);
+    text-decoration: none;
+    user-select: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--color-blue-light);
+    text-decoration: underline;
+    outline: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .login-container {
+      padding: 30px 20px 40px;
+      width: 100%;
+      max-width: 420px;
+    }
+  }
+
+  /* Footer */
+  footer.site-footer {
+    background: linear-gradient(90deg, var(--color-green-dark), var(--color-blue-dark));
+    color: var(--color-white);
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-weight: 500;
+    user-select: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+  footer.site-footer a {
+    color: var(--color-green-mid);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+  }
+  footer.site-footer a:hover,
+  footer.site-footer a:focus {
+    color: var(--color-blue-light);
+    text-decoration: underline;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <a href="#" class="logo">Ecoycle</a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="about 1.html">About</a></li>
+    <li><a href="add.html">Neocycle</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="login.html">Login</a></li>
+  </ul>
+</nav>
+
+<div class="login-container" role="main" aria-labelledby="register-title">
+  <h2 id="register-title">Login  Account</h2>
+  <p>Want to join us in this exciting journey of recycling?</p>
+
+  <form id="registerForm" aria-describedby="register-desc">
+    <input
+      type="email"
+      id="regEmail"
+      placeholder="Enter your email"
+      required
+      aria-label="Email address"
+    />
+    <br>
+    
+    <input
+      type="password"
+      id="regPassword"
+      placeholder="Enter your password"
+      required
+      aria-label="Password"
+      minlength="6"
+    />
+    <br>
+    <button type="submit">login</button>
+    <p id="register-desc">
+      Don't have an account? <a href="register.html">register</a>
+    </p>
+  </form>
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <p>© 2025 Ecoycle. Committed to a greener, cleaner future.<a href="mailto:support@neocycle.com">Contact us</a></p>
+</footer>
+
+ <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      let savedEmail = localStorage.getItem("userEmail");
+      let savedPassword = localStorage.getItem("userPassword");
+
+      if (email === savedEmail ) {
+        alert("Login successful!");
+        // Redirect after login success
+        window.location.href = "index.html"; // change to your page or external site
+      } else {
+        alert("You don't have an account. Please register first.");
+      }
+    });
+  </script>
+</body>
+</html>
+

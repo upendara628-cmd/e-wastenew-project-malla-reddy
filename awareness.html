@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>E-Waste Awareness Programs | Neospace</title>
+<style>
+  :root {
+    --emerald: #2ecc71;
+    --mint: #00b894;
+    --forest: #388e3c;
+    --seafoam: #009688;
+    --spring-green: #00e676;
+    --teal-green: #00796b;
+    --blue-accent: #0288d1;
+    --yellow-accent: #fbc02d;
+    --earth-tone: #6d4c41;
+    --text-light: #fff;
+    --text-dark: #212121;
+    --bg-gradient-start: #e8f5e9;
+    --bg-gradient-end: #f1f8e9;
+    --bg-pattern-color: rgba(46,125,50,0.03);
+    --border-radius: 12px;
+    --box-shadow-default: rgba(0, 0, 0, 0.1);
+    --transition-time: 0.35s;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width-layout: 1100px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background:
+      linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end)),
+      repeating-radial-gradient(circle at center, var(--bg-pattern-color) 0, transparent 35px);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  a {
+    color: var(--blue-accent);
+    text-decoration: none;
+    transition: color var(--transition-time);
+  }
+  a:hover,
+  a:focus {
+    color: var(--emerald);
+    outline: none;
+  }
+  header.hero {
+    background: linear-gradient(135deg, var(--emerald), var(--yellow-accent));
+    color: var(--text-light);
+    width: 100%;
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 3rem;
+  }
+  header.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+  }
+  header.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  main.container {
+    max-width: var(--max-width-layout);
+    margin: 0 auto 5rem;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--forest);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .box {
+    background-color: var(--text-light);
+    border-left: 6px solid var(--emerald);
+    border-radius: var(--border-radius);
+    padding: 2rem 1.75rem 2.25rem;
+    box-shadow: 0 6px 20px var(--box-shadow-default);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    transition:
+      transform var(--transition-time) ease,
+      box-shadow var(--transition-time) ease,
+      background-color var(--transition-time) ease,
+      color var(--transition-time) ease;
+    cursor: default;
+  }
+  .box:hover,
+  .box:focus {
+    background-color: var(--yellow-accent);
+    color: var(--text-light);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.22);
+    transform: translateY(-6px) scale(1.05);
+    outline: none;
+  }
+  .box:focus {
+    outline: 3px solid var(--yellow-accent);
+    outline-offset: 3px;
+  }
+  .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: inherit;
+    transition: color var(--transition-time);
+  }
+  .box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 0.75rem;
+    flex-grow: 1;
+    color: inherit;
+    transition: color var(--transition-time);
+  }
+  .icon-container {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.25rem;
+    flex-shrink: 0;
+    color: currentColor;
+    transition: color var(--transition-time);
+  }
+  .box:hover .icon-container,
+  .box:focus .icon-container {
+    color: var(--text-light);
+  }
+  .icon-svg {
+    width: 100%;
+    height: 100%;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 3;
+  }
+  footer.site-footer {
+    background: var(--forest);
+    color: var(--text-light);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  footer.site-footer p {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+  footer nav ul li a {
+    color: var(--yellow-accent);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  footer nav ul li a:hover,
+  footer nav ul li a:focus {
+    color: var(--text-light);
+    outline: none;
+  }
+  @media (max-width: 600px) {
+    header.hero h1 {
+      font-size: 2.2rem;
+    }
+    header.hero p {
+      font-size: 1.1rem;
+    }
+    main.container {
+      padding: 0 1rem 3rem;
+    }
+    .box {
+      padding: 1.5rem 1.25rem 1.75rem;
+    }
+    .box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+    .box p {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .icon-container {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" role="banner" id="top">
+  <div class="hero-content">
+    <h1>Why E-Waste Awareness Matters</h1>
+    <p>E-waste is one of the fastest growing waste streams worldwide, threatening our health and environment. Awareness programs empower communities to recycle responsibly, reduce harm, and reclaim valuable materials.</p>
+  </div>
+</header>
+
+<main class="container" role="main">
+  <h2 class="section-title" id="programs-heading">Types of E-Waste Awareness Programs</h2>
+
+  <section class="grid" aria-labelledby="programs-heading">
+    <article class="box" tabindex="0" role="listitem" aria-label="Workshops and Training">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="18" r="10" stroke="currentColor" stroke-width="3"/>
+          <rect x="14" y="32" width="36" height="18" rx="4" stroke="currentColor" stroke-width="3"/>
+          <path d="M26 50h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3>Workshops & Training</h3>
+      <p>Interactive sessions that teach safe e-waste disposal, recycling techniques, and the environmental impacts of improper dumping. Real-life stories and hands-on exercises help participants understand and act responsibly.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="School Awareness Campaigns">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 46h32V22L32 10 16 22v24z" stroke="currentColor" stroke-width="3" fill="none"/>
+          <circle cx="32" cy="36" r="5" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3>School Awareness Campaigns</h3>
+      <p>Engaging students through eco-clubs, poster contests, and educational talks. Encouraging the next generation to become ambassadors for sustainable e-waste management.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="Community Outreach Events">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/>
+          <path d="M32 12v28l18 10" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3>Community Outreach Events</h3>
+      <p>Fun street plays, fairs, and interactive booths designed to raise local awareness. These events bring together people of all ages to learn, share, and commit to better e-waste practices.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="Social Media Campaigns">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="16" y="16" width="32" height="32" rx="5" stroke="currentColor" stroke-width="3"/>
+          <circle cx="32" cy="32" r="10" stroke="currentColor" stroke-width="3"/>
+          <path d="M32 22v20M22 32h20" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3>Social Media Campaigns</h3>
+      <p>Creative infographics, videos, and challenges on Instagram, TikTok, and YouTube reach wide audiences, especially youth, making awareness viral and actionable.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="Corporate Awareness Programs">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="20" width="28" height="24" rx="4" stroke="currentColor" stroke-width="3"/>
+          <circle cx="32" cy="44" r="6" fill="currentColor"/>
+          <line x1="25" y1="26" x2="39" y2="26" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+      <h3>Corporate Awareness Programs</h3>
+      <p>Workplace seminars about green IT, recycling policies, and e-waste responsibility foster sustainable corporate cultures and employee leadership.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="Government and NGO Initiatives">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="44" width="36" height="12" stroke="currentColor" stroke-width="3"/>
+          <path d="M20 44V30l12-16 12 16v14" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <h3>Government & NGO Initiatives</h3>
+      <p>Nationwide campaigns, advertisements, and community radio talk programs expand awareness and push for effective e-waste policies.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="Repair Cafes & Upcycling Events">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="14" y="22" width="36" height="24" rx="4" stroke="currentColor" stroke-width="3"/>
+          <path d="M22 38h20v8H22v-8z" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="22" x2="32" y2="14" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <h3>Repair Cafes & Upcycling Events</h3>
+      <p>Community-driven workshops that encourage fixing electronics and creative reuse, significantly reducing e-waste while promoting sustainable lifestyles.</p>
+    </article>
+
+    <article class="box" tabindex="0" role="listitem" aria-label="Youth Ambassador Programs">
+      <div class="icon-container" aria-hidden="true">
+        <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="20" r="8" stroke="currentColor" stroke-width="3"/>
+          <path d="M16 48c0-8 32-8 32 0v6a6 6 0 0 1-6 6h-20a6 6 0 0 1-6-6v-6z" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <h3>Youth Ambassador Programs</h3>
+      <p>Empowering passionate young leaders to champion e-waste awareness in schools, neighborhoods, and online platforms fosters grassroots change.</p>
+    </article>
+
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <p>© 2025 Neospace. Every voice raised for e-waste awareness helps protect our planet. Join us in making a difference.</p>
+  <nav aria-label="Footer quick links">
+    <ul>
+      <li><a href="#programs-heading">Programs</a></li>
+      <li><a href="https://www.unep.org/explore-topics/resource-efficiency/what-we-do/electronic-waste" target="_blank" rel="noopener">Learn More</a></li>
+      <li><a href="#top">Back to Top</a></li>
+    </ul>
+  </nav>
+</footer>
+
+</body>
+</html>

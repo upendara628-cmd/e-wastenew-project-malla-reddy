@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Types of Recycling Units | Ecocycle</title>
+<style>
+  :root {
+    --emerald: #2ecc71;
+    --mint: #00b894;
+    --forest: #388e3c;
+    --seafoam: #009688;
+    --spring-green: #00e676;
+    --teal-green: #00796b;
+    --blue-accent: #0288d1;
+    --yellow-accent: #fbc02d;
+    --earth-tone: #6d4c41;
+    --text-light: #fff;
+    --text-dark: #212121;
+    --bg-gradient-start: #e3f2fd;
+    --bg-gradient-end: #fce4ec;
+    --bg-pattern-color: rgba(46,125,50,0.03);
+    --border-radius: 12px;
+    --box-shadow-default: rgba(0, 0, 0, 0.1);
+    --transition-time: 0.35s;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width-layout: 1100px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background:
+      linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end)),
+      repeating-radial-gradient(circle at center, var(--bg-pattern-color) 0, transparent 35px);
+    color: var(--text-dark);
+    min-height: 100vh;
+  }
+  a {
+    color: var(--blue-accent);
+    text-decoration: none;
+    transition: color var(--transition-time);
+  }
+  a:hover,
+  a:focus {
+    color: var(--emerald);
+    outline: none;
+  }
+  header.hero {
+    background: linear-gradient(135deg, var(--emerald), var(--yellow-accent));
+    color: var(--text-light);
+    padding: 4rem 1rem 3rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  header.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+  }
+  header.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  main.container {
+    max-width: var(--max-width-layout);
+    margin: 3rem auto 5rem;
+    padding: 0 1.5rem;
+  }
+  h2.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--forest);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  .box {
+    background-color: var(--emerald);
+    padding: 2rem 1.75rem 2.25rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 20px var(--box-shadow-default);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    transition:
+      transform var(--transition-time) ease,
+      box-shadow var(--transition-time) ease,
+      background-color var(--transition-time) ease,
+      color var(--transition-time) ease;
+    cursor: default;
+  }
+  .box:nth-child(2) { background-color: var(--mint); }
+  .box:nth-child(3) { background-color: var(--forest); }
+  .box:nth-child(4) { background-color: var(--seafoam); }
+  .box:nth-child(5) { background-color: var(--spring-green); color: var(--earth-tone); }
+  .box:nth-child(6) { background-color: var(--teal-green); }
+  .box:nth-child(7) { background-color: var(--blue-accent); }
+  .box:nth-child(8) { background-color: var(--yellow-accent); color: var(--earth-tone); }
+  .box:hover,
+  .box:focus {
+    transform: scale(1.06);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.22);
+    color: var(--text-light);
+    background-color: var(--yellow-accent);
+  }
+  .box:focus {
+    outline: 3px solid var(--yellow-accent);
+    outline-offset: 3px;
+  }
+  .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    flex-grow: 1;
+  }
+  .icon-container {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.25rem;
+    flex-shrink: 0;
+    color: currentColor;
+  }
+  .icon-svg {
+    width: 100%;
+    height: 100%;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    stroke-width: 3;
+  }
+  footer.site-footer {
+    background: var(--forest);
+    color: var(--text-light);
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  footer.site-footer p {
+    font-size: 0.9rem;
+    margin: 0 0 0.75rem;
+    font-weight: 500;
+  }
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+  footer nav ul li a {
+    color: var(--yellow-accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  footer nav ul li a:hover,
+  footer nav ul li a:focus {
+    color: var(--text-light);
+    outline: none;
+  }
+  @media (max-width: 600px) {
+    header.hero h1 {
+      font-size: 2.2rem;
+    }
+    header.hero p {
+      font-size: 1.1rem;
+    }
+    main.container {
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+    }
+    .box {
+      padding: 1.5rem 1.25rem 1.75rem;
+    }
+    .box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+    .box p {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .icon-container {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header class="hero" role="banner">
+  <h1>Discover the Vital Types of Recycling Units</h1>
+  <p>Recycling units are the backbone of a sustainable future. By properly sorting, processing, and repurposing electronic waste, they keep harmful toxins out of our environment and recover valuable materials. Explore the varied units making this possible — from urban hubs to community-driven micro-units.</p>
+</header>
+
+<main class="container" role="main">
+  <section aria-labelledby="units-heading">
+    <h2 id="units-heading" class="section-title">Types of Recycling Units</h2>
+    <div class="grid" role="list">
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Urban Collection Centers">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="24" width="40" height="20" rx="5" stroke="currentColor"/>
+            <circle cx="22" cy="48" r="5" fill="currentColor"/>
+            <circle cx="42" cy="48" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Urban Collection Centers</h3>
+        <p>Convenient centers located throughout cities where residents can drop off old electronics safely. These centers offer sorting stations and secure disposal options for batteries and cables.</p>
+        <p>They streamline recycling efforts, keeping e-waste recycling accessible and effective for busy urban populations.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Mobile Recycling Vans">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="22" width="38" height="20" rx="4" stroke="currentColor"/>
+            <circle cx="22" cy="46" r="4" fill="currentColor"/>
+            <circle cx="42" cy="46" r="4" fill="currentColor"/>
+            <rect x="27" y="30" width="10" height="8" fill="currentColor" />
+          </svg>
+        </div>
+        <h3>Mobile Recycling Vans</h3>
+        <p>These flexible, traveling units visit neighborhoods, schools, and workplaces to collect e-waste directly from the community. Ideal for outreach and awareness campaigns.</p>
+        <p>They expand recycling access to areas without permanent centers, especially underserved communities.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Industrial Processing Units">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="16" y="22" width="32" height="24" rx="3" stroke="currentColor"/>
+            <rect x="22" y="28" width="20" height="10" fill="currentColor"/>
+            <path d="M22 38h20v8H22v-8z" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Industrial Processing Units</h3>
+        <p>Large-scale facilities equipped with advanced machinery for dismantling, sorting, and recovering valuable materials from large volumes of electronic waste.</p>
+        <p>They maximize resource recovery and minimize environmental harm through specialized processes.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Eco-Tech Hubs">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="14,40 32,54 50,40 32,26" stroke="currentColor" stroke-width="3" fill="none"/>
+            <circle cx="32" cy="36" r="5" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Eco-Tech Hubs</h3>
+        <p>Innovative centers that merge recycling efforts with education and community engagement. They offer workshops and sustainable tech showcases.</p>
+        <p>Eco-Tech Hubs inspire change by connecting knowledge with practical action.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Retail Drop-Off Points">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="18" y="16" width="28" height="34" rx="4" stroke="currentColor" stroke-width="3"/>
+            <circle cx="32" cy="48" r="5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Retail Drop-Off Points</h3>
+        <p>Partnering with electronics stores, these points allow customers to trade in or recycle old devices during purchases or repairs.</p>
+        <p>This encourages responsible consumer behavior and supports circular economy goals.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Rural Micro Units">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="3"/>
+            <line x1="22" y1="22" x2="42" y2="42" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <h3>Rural Micro Units</h3>
+        <p>Small-scale recycling setups in remote or underserved areas, offering local jobs and training, while managing community-specific e-waste.</p>
+        <p>Empowering rural populations and reducing hazardous dumping.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Specialized Hazardous Waste Units">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/>
+            <path d="M32 12v20" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M22 32h20" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Specialized Hazardous Waste Units</h3>
+        <p>Facilities dedicated to safely processing hazardous e-waste components like batteries, mercury switches, and CRT monitors.</p>
+        <p>Ensure harmful substances are neutralized or recycled without contaminating the environment.</p>
+      </article>
+
+      <article class="box" role="listitem" tabindex="0" aria-label="Upcycling & Repair Workshops">
+        <div class="icon-container" aria-hidden="true">
+          <svg class="icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="22" width="36" height="24" rx="3" stroke="currentColor" stroke-width="3"/>
+            <path d="M22 46l10-12 10 12" stroke="currentColor" stroke-width="3"/>
+          </svg>
+        </div>
+        <h3>Upcycling & Repair Workshops</h3>
+        <p>Community-driven spaces where electronics are repaired or creatively transformed, reducing waste and extending product life cycles.</p>
+        <p>Encourages sustainability mindset and DIY skills among participants.</p>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Ecocycle. Every piece of e-waste recycled is a step towards a healthier planet. Join the movement.</p>
+  <nav aria-label="Footer quick links">
+    <ul>
+      <li><a href="recyclingunit.html">Recycling Units</a></li>
+      <li><a href="https://www.weforum.org/agenda/archive/e-waste/" target="_blank" rel="noopener">Learn More</a></li>
+      <li><a href="#top">Back to Top</a></li>
+    </ul>
+  </nav>
+</footer>
+</body>
+</html>

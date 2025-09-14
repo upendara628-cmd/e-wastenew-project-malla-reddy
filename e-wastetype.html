@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>E-Waste Types & Dangers | EcoCycle</title>
+<style>
+  :root {
+    --green-dark: #2e7d32;
+    --green-medium: #43a047;
+    --green-light: #a5d6a7;
+    --blue-dark: #1565c0;
+    --blue-light: #4299e1;
+    --yellow-accent: #fbc02d;
+    --text-dark: #212121;
+    --text-light: #ffffff;
+    --background: linear-gradient(135deg, #e0f7fa, #a7cedf);
+    --border-radius: 15px;
+    --box-shadow: rgba(0, 0, 0, 0.15);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 900px;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--background);
+    color: var(--text-dark);
+    line-height: 1.7;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    width: 100%;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2.5rem 3rem;
+    box-shadow: 0 8px 25px var(--box-shadow);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  p.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--blue-dark);
+    margin-bottom: 2rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--green-medium);
+    margin-bottom: 1.25rem;
+    border-bottom: 4px solid var(--yellow-accent);
+    padding-bottom: 6px;
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  li {
+    background: var(--green-light);
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--green-dark);
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(67,160,71,0.3);
+    transition: background-color 0.3s ease;
+  }
+  li:hover {
+    background: var(--yellow-accent);
+    color: var(--text-dark);
+    box-shadow: 0 4px 14px rgba(251,192,45,0.6);
+  }
+
+  .danger-list li {
+    background: var(--blue-light);
+    color: var(--text-light);
+    font-weight: 600;
+    text-shadow: 0 0 2px rgba(0,0,0,0.3);
+  }
+  .danger-list li:hover {
+    background: var(--blue-dark);
+    box-shadow: 0 4px 20px rgba(66,153,225,0.8);
+  }
+
+  blockquote {
+    margin: 2rem auto;
+    max-width: 650px;
+    padding: 1.5rem 2rem;
+    border-left: 6px solid var(--yellow-accent);
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-style: italic;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(67,160,71,0.2);
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 1.5rem 1.5rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      padding-bottom: 4px;
+      border-bottom-width: 3px;
+    }
+    li {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+    blockquote {
+      font-size: 1rem;
+      padding: 1rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    display: none;
+  }
+  #nav-toggle:checked + .nav-toggle-label + .nav-links {
+    display: flex;
+  }
+  .nav-toggle-label {
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="container" role="main">
+  <h1>Understanding E-Waste: Types and Dangers</h1>
+  <p class="tagline">Protect our planet by learning how e-waste affects the environment and health — and what you can do.</p>
+
+  <section aria-labelledby="types-title">
+    <h2 id="types-title">Common Types of E-Waste</h2>
+    <ul>
+      <li><strong>Mobile Phones & Tablets:</strong> Often contain toxic metals like lead and mercury.</li>
+      <li><strong>Computers & Laptops:</strong> Include hazardous batteries and circuit boards.</li>
+      <li><strong>Televisions & Displays:</strong> CRT and LCD screens with harmful phosphors and heavy metals.</li>
+      <li><strong>Household Appliances:</strong> Refrigerators, microwaves with refrigerants and heavy metals.</li>
+      <li><strong>Batteries:</strong> Lithium, lead-acid, and other types require careful disposal.</li>
+      <li><strong>Lighting Equipment:</strong> Fluorescent bulbs containing mercury vapor.</li>
+      <li><strong>Networking Equipment:</strong> Includes plastics and circuit boards with hazardous substances.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="dangers-title">
+    <h2 id="dangers-title">Dangers of Improper E-Waste Disposal</h2>
+    <ul class="danger-list">
+      <li><strong>Toxic Chemical Leaks:</strong> Lead, mercury, and cadmium pollute soil and water.</li>
+      <li><strong>Health Risks:</strong> Respiratory problems, neurological damage, birth defects.</li>
+      <li><strong>Environmental Harm:</strong> Persistent plastics and heavy metals damage ecosystems.</li>
+      <li><strong>Water & Ground Contamination:</strong> Pollutes drinking water and farmland.</li>
+      <li><strong>Air Pollution:</strong> Burning e-waste releases deadly dioxins and furans.</li>
+    </ul>
+    <blockquote>
+      “Millions of informal workers in e-waste recycling face health risks daily. Safe and responsible e-waste management can save lives and protect our planet.” — Environmental expert
+    </blockquote>
+  </section>
+
+  <section aria-labelledby="solution-title">
+    <h2 id="solution-title">How You Can Help</h2>
+    <p>Recycle your electronics at certified centers, donate reusable devices, and spread awareness in your community. Every small action helps reduce hazardous waste and conserves valuable resources.</p>
+  </section>
+</div>
+
+</body>
+</html>

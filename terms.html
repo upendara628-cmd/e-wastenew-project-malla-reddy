@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Use - Ecocycle E-Waste Management</title>
+<style>
+  :root {
+    --blue-start: #1e88e5;
+    --green-end: #43a047;
+    --accent-yellow: #fbc02d;
+    --text-light: #ffffff;
+    --text-dark: #2e7d32;
+    --card-bg: #ffffff;
+    --border-radius: 12px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width: 900px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --transition-time: 0.3s;
+    --section-divider: #e0e7eb;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--blue-start), var(--green-end));
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem 3rem;
+  }
+  header.banner {
+    width: 100%;
+    max-width: var(--max-width);
+    background: rgba(255 255 255 / 0.12);
+    padding: 3rem 2rem 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    margin-top: 3rem;
+    color: var(--text-light);
+    user-select: none;
+  }
+  header.banner h1 {
+    font-size: 2.8rem;
+    margin: 0 0 0.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  header.banner p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    font-style: italic;
+    opacity: 0.85;
+  }
+  main.container {
+    max-width: var(--max-width);
+    width: 100%;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem 3rem;
+    margin: 2rem 0 0;
+  }
+  h2.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--green-end);
+  }
+  section.term {
+    border-top: 1.8px solid var(--section-divider);
+    padding: 1.8rem 0 0;
+  }
+  section.term:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+  section.term h3 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    color: var(--blue-start);
+    display: flex;
+    align-items: center;
+  }
+  section.term h3::before {
+    content: attr(data-number);
+    display: inline-block;
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
+    font-weight: 700;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 1rem;
+    font-family: monospace;
+    box-shadow: 0 0 8px var(--accent-yellow);
+  }
+  section.term p {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0 0 1rem 0;
+    color: var(--text-dark);
+  }
+  section.term p:last-child {
+    margin-bottom: 0;
+  }
+  footer.site-footer {
+    max-width: var(--max-width);
+    width: 100%;
+    background: rgba(255 255 255 / 0.12);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.8rem 2rem;
+    text-align: center;
+    color: var(--text-light);
+    user-select: none;
+  }
+  footer.site-footer p {
+    margin: 0.2rem 0;
+  }
+  footer.site-footer a {
+    color: var(--accent-yellow);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color var(--transition-time);
+  }
+  footer.site-footer a:hover,
+  footer.site-footer a:focus {
+    color: var(--text-light);
+    text-decoration: underline;
+    outline: none;
+  }
+  @media (max-width: 600px) {
+    header.banner h1 {
+      font-size: 2rem;
+    }
+    header.banner p {
+      font-size: 1.1rem;
+    }
+    main.container {
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0 0;
+    }
+    h2.section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    section.term h3 {
+      font-size: 1.2rem;
+    }
+    section.term h3::before {
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      font-size: 0.9rem;
+      margin-right: 0.75rem;
+    }
+    section.term p {
+      font-size: 0.95rem;
+    }
+    footer.site-footer {
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="banner" role="banner">
+  <h1>Terms of Use</h1>
+  <p>Responsible Technology, Responsible Future</p>
+</header>
+
+<main class="container" role="main" aria-label="Terms of Use Content">
+  <h2 class="section-title">Please read our terms carefully</h2>
+  
+  <section class="term" data-number="1" aria-labelledby="t1-title">
+    <h3 id="t1-title">Responsible Usage</h3>
+    <p>Neospace provides services for individuals and organizations dedicated to ethical e-waste disposal. By accessing our platform, you agree to use it lawfully and respectfully, avoiding any misuse or disruptions.</p>
+  </section>
+  
+  <section class="term" data-number="2" aria-labelledby="t2-title">
+    <h3 id="t2-title">Environmental Commitment</h3>
+    <p>We are deeply committed to sustainability. Using our services means supporting proper e-waste handling and following recommendations to minimize environmental impact.</p>
+  </section>
+  
+  <section class="term" data-number="3" aria-labelledby="t3-title">
+    <h3 id="t3-title">Data & Privacy</h3>
+    <p>Your privacy matters. We collect only essential data to provide communication and services, securely and transparently, without selling or sharing your information without consent.</p>
+  </section>
+
+  <section class="term" data-number="4" aria-labelledby="t4-title">
+    <h3 id="t4-title">Intellectual Property</h3>
+    <p>All content and digital assets on this site belong to Neospace unless indicated otherwise. Reproduction or modification without permission is prohibited.</p>
+  </section>
+
+  <section class="term" data-number="5" aria-labelledby="t5-title">
+    <h3 id="t5-title">Service Limitations</h3>
+    <p>While we strive for the highest quality, Neospace is not liable for delays or issues caused by external factors beyond our control.</p>
+  </section>
+
+  <section class="term" data-number="6" aria-labelledby="t6-title">
+    <h3 id="t6-title">Amendments</h3>
+    <p>We may update these terms as needed. Continued use indicates acceptance of the latest version posted here.</p>
+  </section>
+
+  <section class="term" data-number="7" aria-labelledby="t7-title">
+    <h3 id="t7-title">Contact</h3>
+    <p>If you have questions or concerns, please contact us at <strong>legal@neospace-ewaste.com</strong>. We’re here to help and listen.</p>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <p>© 2025 Neospace E-Waste Management. Committed to a cleaner, greener tomorrow.</p>
+  <p>Contact us: <a href="mailto:legal@ecocycle-ewaste.com">legal@ecocycle-ewaste.com</a></p>
+</footer>
+
+</body>
+</html>
+
+

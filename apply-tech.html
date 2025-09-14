@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply - Recycling Technician | NeoCycle</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1e2a38;
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    button {
+      background: #43a047;
+      color: #fff;
+      border: none;
+      padding: 12px 18px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #2e7d32;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #43a047;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Apply - Recycling Technician</h1>
+    <p>Work with NeoCycle to handle, sort, and recycle e-waste safely.</p>
+    
+    <form action="submit-tech.php" method="post">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="experience">Experience with Recycling / Handling Electronics</label>
+      <textarea id="experience" name="experience" rows="4" placeholder="Describe your experience (if any)" required></textarea>
+
+      <label for="certification">Certifications (if any)</label>
+      <input type="text" id="certification" name="certification" placeholder="Enter certification (Optional)">
+
+      <label for="message">Why do you want to join NeoCycle?</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your motivation..." required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <a href="add.html#jobs" class="back-link">← Back to Jobs</a>
+  </div>
+</body>
+</html>

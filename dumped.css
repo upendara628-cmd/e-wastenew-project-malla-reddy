@@ -1,0 +1,160 @@
+:root {
+  --orange-warning: #ff9800;
+  --orange-deep: #e65100;
+  --red-warning: #d84315;
+  --warm-bg1: #ffecb3;
+  --warm-bg2: #fff3e0;
+  --warning-bg: #ffcc80;
+  --accent-green: #388e3c;
+  --white: #fff;
+  --shadow: rgba(216, 67, 21, 0.15);
+  --shadow-strong: rgba(216, 67, 21, 0.25);
+  --border-radius: 10px;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:
+    radial-gradient(circle at 25% 70%, #ffcc80 0 120px, transparent 120px),
+    linear-gradient(110deg, var(--warm-bg1) 45%, var(--warm-bg2) 100%);
+  color: var(--orange-deep);
+  line-height: 1.7;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.7rem 1.2rem 2.8rem;
+}
+header h1 {
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.6rem;
+  text-align: center;
+  color: var(--red-warning);
+  font-weight: 700;
+}
+.stats-box {
+  background: linear-gradient(110deg, #ffcc80 80%, #ffe6cc 100%);
+  border-left: 7px solid var(--orange-warning);
+  box-shadow: 0 2px 16px var(--shadow);
+  border-radius: var(--border-radius);
+  color: #7a4c20;
+  margin-bottom: 2rem;
+  padding: 1.1em 1.5em 1em 1.2em;
+}
+.stats-box h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5em;
+  color: var(--orange-deep);
+  font-weight: 700;
+}
+.stats-box ul { margin: 0; padding-left: 1.2em; }
+.stats-box li {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+.stats-box strong { color: var(--red-warning); }
+.warning-box {
+  background: var(--warning-bg);
+  border-left: 8px solid var(--red-warning);
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 22px var(--shadow-strong);
+  margin-bottom: 2rem;
+  color: #5d390b;
+  padding: 0;
+  animation: fade-in 1s cubic-bezier(.4,.8,.5,1.1) both;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: none;}
+}
+.slide-up {
+  padding: 2rem 2.1rem 1.2rem 2.1rem;
+  animation: slide-up-box 0.8s cubic-bezier(.66,1.56,.41,.99) both;
+}
+@keyframes slide-up-box {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: none;}
+}
+.callout {
+  font-size: 1.12rem;
+  background: #fff3e0;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  padding: 0.77em 1em;
+  box-shadow: 0 1px 4px #0002;
+  color: #bf360c;
+  display: flex;
+  align-items: center;
+  font-weight: 650;
+}
+.icon {
+  font-size: 1.1em;
+  margin-right: 0.37em;
+}
+.warning-box ul { margin: 0 0 1em 0; padding-left: 1.1em; list-style: none;}
+.warning-box ul li {
+  margin-bottom: 0.67em;
+  font-weight: 520;
+  display: flex;
+  align-items: flex-start;
+}
+.warning-box ul li .icon {
+  font-size: 1em;
+  margin-right: 0.32em;
+  margin-top: 0.08em;
+}
+.warning-box strong { color: #bf360c; }
+.warning-box blockquote {
+  margin: 1rem 0 0.7rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #ff9800cc;
+  font-style: italic;
+  color: #a65a17;
+  background: #fff4e0;
+  border-radius: 6px;
+}
+.highlight {
+  display: inline-block;
+  background: #ffd5a3;
+  color: #8d3206;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-weight: 650;
+  margin-right: 4px;
+}
+.cta {
+  text-align: center;
+  margin-top: 1.3rem;
+}
+.cta a {
+  background: linear-gradient(87deg, #ff9800 60%, #e64a19 95%);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8em 1.5em;
+  font-weight: 700;
+  font-size: 1.03em;
+  letter-spacing: 0.4px;
+  border-radius: 7px;
+  margin-top: 1.3em;
+  box-shadow: 0 6px 18px #e64a191b;
+  transition: background 0.29s, transform 0.14s, box-shadow 0.13s;
+  display: inline-block;
+  user-select: none;
+}
+.cta a:hover,
+.cta a:focus {
+  background: linear-gradient(93deg, #e64a19 65%, #ff9800 100%);
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0 9px 21px #e6510029;
+}
+@media (max-width: 700px) {
+  .container { padding: 1.3rem 0.5rem 1.8rem;}
+  header h1 { font-size: 1.32rem;}
+  .stats-box, .slide-up { padding: 1.2rem 0.7rem 1rem 0.7rem; font-size: 0.97rem;}
+  .callout { font-size: 1rem; padding: 0.54rem 0.5rem;}
+  .warning-box ul, .warning-box blockquote { font-size: 0.95rem; padding-left: 0.6rem;}
+}

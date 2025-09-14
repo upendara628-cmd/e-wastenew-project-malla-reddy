@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>E-Waste Collection Drives | Neospace</title>
+<style>
+  :root {
+    --green-dark: #2e7d32;
+    --green-darker: #1b5e20;
+    --green-light: #aeea00;
+    --green-medium: #43a047;
+    --accent-yellow: #fbc02d;
+    --accent-blue: #0288d1;
+    --text-dark: #4e342e;
+    --bg-gradient-start: #e8f5e9;
+    --bg-gradient-end: #f1f8e9;
+    --border-radius: 10px;
+    --transition-time: 0.35s;
+    --box-shadow: rgba(0, 0, 0, 0.07);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --max-width-layout: 1100px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: linear-gradient(to right, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--green-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: color var(--transition-time);
+  }
+
+  a:hover,
+  a:focus {
+    color: var(--green-darker);
+    outline: none;
+  }
+
+  .container {
+    max-width: var(--max-width-layout);
+    width: 100%;
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--green-medium), var(--accent-yellow));
+    color: #fff;
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--green-darker);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .box {
+    background-color: #fff;
+    border-left: 6px solid var(--green-medium);
+    border-radius: var(--border-radius);
+    padding: 1.75rem 2rem;
+    box-shadow: 0 6px 16px var(--box-shadow);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-time) ease, background-color var(--transition-time) ease, color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    cursor: default;
+  }
+
+  .box:focus,
+  .box:hover {
+    background-color: var(--green-light);
+    color: #fff;
+    transform: translateY(-7px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+
+  .box h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    color: inherit;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  .box p {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+    color: inherit;
+    flex-grow: 1;
+  }
+
+  .icon-container {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: var(--green-medium);
+    flex-shrink: 0;
+    transition: color var(--transition-time) ease;
+  }
+
+  .box:focus .icon-container,
+  .box:hover .icon-container {
+    color: #fff;
+  }
+
+  .icon-svg {
+    width: 100%;
+    height: 100%;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  footer {
+    background-color: #f1f8e9;
+    width: 100%;
+    padding: 1.8rem 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--green-darker);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  footer nav ul li a {
+    color: var(--green-medium);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  footer nav ul li a:hover,
+  footer nav ul li a:focus {
+    color: var(--accent-blue);
+    outline: none;
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .box {
+      padding: 1.25rem 1.5rem;
+    }
+    .container {
+      padding: 2rem 1rem 3rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <h1>Join the E-Waste Revolution</h1>
+      <p>Together, we can make a difference by responsibly recycling electronic waste in our communities. Discover different collection drives near you and help protect our planet for future generations.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="collection-drives-heading">
+      <h2 id="collection-drives-heading" class="section-title">Types of E-Waste Collection Drives</h2>
+      <div class="grid" role="list">
+
+        <article class="box" role="listitem" tabindex="0" aria-label="Community Drop-Off Days">
+          <div class="icon-container" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+              <rect x="10" y="20" width="44" height="24" rx="4" stroke="currentColor" stroke-width="3"/>
+              <circle cx="22" cy="46" r="4" fill="currentColor"/>
+              <circle cx="42" cy="46" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Community Drop-Off Days</h3>
+          <p>Local booths at parks or schools where residents can safely dispose of old electronics. Incentives like eco-points and vouchers reward participation and build community spirit.</p>
+          <p>Often supported by local authorities, these events raise awareness and keep harmful e-waste out of landfills.</p>
+        </article>
+
+        <article class="box" role="listitem" tabindex="0" aria-label="Corporate Clean-Out Campaigns">
+          <div class="icon-container" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+              <rect x="14" y="18" width="36" height="28" rx="3" stroke="currentColor" stroke-width="3"/>
+              <rect x="22" y="26" width="20" height="12" fill="currentColor" />
+              <path d="M22 38h20v8H22v-8z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Corporate Clean-Out Campaigns</h3>
+          <p>Partner with offices to securely collect outdated tech. Employees benefit from secure data destruction and learn about environmental responsibility during awareness sessions.</p>
+          <p>Companies reduce liabilities and promote green values inside their culture.</p>
+        </article>
+
+        <article class="box" role="listitem" tabindex="0" aria-label="School & College Drives">
+          <div class="icon-container" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+              <path d="M50 20v22L32 50 14 42V20l18-6 18 6z" stroke="currentColor" stroke-width="3" fill="none"/>
+              <circle cx="32" cy="35" r="4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>School & College Drives</h3>
+          <p>Engage students with recycling challenges, competitions, and fun educational events. Participation is rewarded with certificates or badges, building lifelong eco-conscious habits.</p>
+          <p>Drives help schools reduce e-waste and bring sustainability into the classroom.</p>
+        </article>
+
+        <article class="box" role="listitem" tabindex="0" aria-label="Festival or Event Tie-Ins">
+          <div class="icon-container" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+              <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="3"/>
+              <path d="M32 6v26l18 12" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Festival or Event Tie-Ins</h3>
+          <p>Link collection drives to Earth Day or local festivals. Themed booths, interactive games, and giveaways draw crowds while educating on e-waste hazards.</p>
+          <p>Festivals magnify impact by combining fun with sustainability.</p>
+        </article>
+
+        <article class="box" role="listitem" tabindex="0" aria-label="Door-to-Door Collection">
+          <div class="icon-container" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+              <rect x="14" y="20" width="36" height="24" rx="3" stroke="currentColor" stroke-width="3"/>
+              <path d="M30 44h4v12h-4z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Door-to-Door Collection</h3>
+          <p>Scheduled pickups in neighborhoods use branded vans and volunteer support. Flyers and digital campaigns spread awareness beforehand, boosting participation.</p>
+          <p>This convenient method ensures even less-mobile residents can safely recycle electronics.</p>
+        </article>
+
+        <article class="box" role="listitem" tabindex="0" aria-label="Retail Partner Drives">
+          <div class="icon-container" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-svg">
+              <rect x="20" y="12" width="24" height="40" rx="3" stroke="currentColor" stroke-width="3"/>
+              <circle cx="32" cy="44" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Retail Partner Drives</h3>
+          <p>Collaborate with electronics stores on trade-in programs. Customers get discounts or loyalty points when returning old devices, promoting circular economy.</p>
+          <p>Retailers improve brand loyalty while diverting waste from landfills.</p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Neospace. Every device recycled is a step towards a cleaner, greener planet. Join us in making a difference.</p>
+    <nav aria-label="Footer quick links">
+      <ul>
+        <li><a href="#collection-drives-heading">E-Waste Drives</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Electronic_waste" target="_blank" rel="noopener">Learn More</a></li>
+        <li><a href="#top">Back to Top</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
